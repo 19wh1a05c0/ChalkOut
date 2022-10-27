@@ -1,0 +1,17 @@
+<div class="bg-img">
+    <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" class="container">
+      <h1>Login</h1>
+      <br>
+ 
+      <label for="email"><b>Email:</b></label>
+      <input type="text" ngModel name="loginId" #email = ngModel placeholder = "Enter your email...." required><br>
+      <br>
+      <label for="password"><b>Password:</b></label>
+      <input type="password" ngModel name="password" #password = ngModel placeholder = "Enter password.." required>
+      <br>
+      <br><button type="submit" class="btn">Login</button><br>
+      <br>
+      <br>
+      <a routerLink="/register">New User?</a>
+    </form>
+  </div>
