@@ -1,0 +1,14 @@
+let express = require('express');
+let bodyparser=require('body-parser');
+let cors=require("cors");
+let app=express();
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(cors());
+app.use("/login",require("./login/login"));
+app.use("/register",require("./register/register"));
+// app.use("/index",require("./index/index"));
+// app.use("/delete",require("./delete/delete"));
+app.use("/fetch",require("./fetch/fetch"));
+app.listen(3000);
+console.log("server listening the port no.3000");
